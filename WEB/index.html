@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Tsillyk Guitar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Tsillyk Guitar</span>
+        </div>
+        <div id="about">
+            <a href="#" title="" onclick="slowScroll('#main')"></a>
+            <a href="index.html" title="Home">Home</a>
+            <a href="Účet.html" title="O nas">O nas</a>
+            <a href="kontakty.html" title="Kontakty">Kontakty</a>
+            <a href="#" onclick="slowScroll('#faq')" title="FAQ">FAQ</a>
+            <a href="https://www.youtube.com/channel/UCMeiIDzh023zoupPAfCFRxw" target="_blank">YouTube</a>
+            <a href="https://www.muziker.cz/kytary" target="_balnk">E-Shop</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Tsillyk Guitar</h1>
+        <h3>Vyroba kytar a kytarových přislušenství</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Kytary Tsillyk</h2>
+            <span>Volba nejnáročnějších muzikantů</span>
+        </div>
+        <div class="text">
+            <span>Za vznikem značky Tsillyk stála naše touha vyrábět špičkové nástroje pro nejnáročnější muzikanty. K výrobě každé kytary proto přistupujeme s láskou, péčí a precizností. Naše kytary vyrábíme z materiálů nejvyšší kvality získávaných s respektem k životnímu prostředí. Tyto materiály v kombinaci s unikátními výrobními procesy a precizním zpracováním dodávají kytarám Tsillyk výjimečný zvuk nejvyšší kvality, který se snažíme i nadále rozvíjet. To je hlavní úkol našich výzkumných aktivit, v jejichž rámci prolamujeme současné hranice kytarového průmyslu a vyvíjíme nové technologie i výrobní procesy posouvající naše kytary stále blíže k dokonalosti. A právě touha po dokonalosti je tím, co nás pohání vpřed jako stavitele kytar i samotné hráče. Je to hledání, které nemá konce. Je to naše posedlost.</span>
+        </div>
+
+        <div id="overview">
+            <h2>Naše Produkce</h2>
+            <div class="img">
+                <img src="akustika.jpg">
+                <span>Akusticka Kytara</span>
+            </div>
+
+            <div class="img">
+                <img src="klasicka.jpg">
+                <span>Klasicka Kytara</span>
+            </div>
+
+            <div class="img">
+                <img src="bass.jpg">
+                <span>Akusticka Bass Kytara</span>
+            </div>
+
+            <div class="img">
+                <img src="kufr.jpg">
+                <span>Kufry</span>
+            </div>
+
+            <div id="contacts">
+                <center>
+                    <h5>Pro dalši Informace</h5>
+                </center>
+                <form id="form_input">
+                    <label for="name">Jmeno<span>*</span></label><br>
+                    <input type="text" placeholder="Zadejte sve jmeno" name="name" id="name"><br>
+                    <label for="email">Vaš mail<span>*</span></label><br>
+                    <input type="email" placeholder="Zadejte Vaš mail" name="email" id="email"><br>
+                    <label for="message">Sprava<span>*</span></label><br>
+                    <textarea placeholder="Vaše sprava" name="message" id="message"></textarea><br>
+                    <div id="mess_send" class="btn">Odeslat</div>
+                </form>
+            </div>
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            function slowScroll(id) {
+                $('html, body').animate({
+                    scrollTop: $(id).offset().top
+                }, 500);
+            }
+
+            $(document).on("scroll", function() {
+                        if ($(window).scrollTop() === 0)
+                            $("header").removeClass("fixed");
+                        else
+                            $("header").attr("class", "fixed");
+                    }
+        </script>
+</body>
+
+</html>
